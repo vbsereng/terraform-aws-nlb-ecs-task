@@ -27,6 +27,11 @@ output "lb_target_group" {
   value       = aws_lb_target_group.this
 }
 
+output "aws_lb_listener_arn" {
+  description = "aws_lb_listener_arn resource"
+  value       = aws_lb_listener.this.arn
+}
+
 output "security_group_id" {
   description = "Resource ID of Security Group"
   value       = aws_security_group.ecs_service.id
