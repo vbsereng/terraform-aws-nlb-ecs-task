@@ -66,6 +66,7 @@ resource "aws_lb_target_group" "this" {
     port                = var.health_check.port
     protocol            = var.health_check.protocol
     unhealthy_threshold = var.health_check.unhealthy_threshold
+    path                = var.health_check.path
   }
 
   dynamic "stickiness" {
