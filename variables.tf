@@ -57,6 +57,7 @@ variable "health_check" {
     healthy_threshold   = 3
     unhealthy_threshold = 3
     interval            = 30
+    path                = "/"    
   }
   description = "Target group health check, for LB to assess service health"
   type = object({
@@ -65,6 +66,7 @@ variable "health_check" {
     healthy_threshold   = number
     unhealthy_threshold = number
     interval            = number
+    path                = string    
   })
 }
 
